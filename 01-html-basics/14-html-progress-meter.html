@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Progress and Meter</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Progress and Meter</h1>
+        <p>Learning how to display progress and measured values.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Progress Element</h2>
+            <p>Shows how much of a task has been completed.</p>
+
+            <label for="course-progress">HTML Course Progress:</label>
+            <progress id="course-progress" value="70" max="100">
+                70%
+            </progress>
+            <p>70% completed</p>
+        </section>
+
+        <section>
+            <h2>Meter Element</h2>
+            <p>Shows a value within a known range.</p>
+
+            <label for="storage">Storage Used:</label>
+            <meter
+                id="storage"
+                min="0"
+                max="100"
+                low="30"
+                high="80"
+                optimum="20"
+                value="65">
+                65%
+            </meter>
+            <p>65% of storage used</p>
+        </section>
+
+        <section>
+            <h2>Another Progress Example</h2>
+
+            <label for="project-progress">Project Completion:</label>
+            <progress id="project-progress" value="4" max="10">
+                4 out of 10
+            </progress>
+            <p>4 out of 10 tasks completed</p>
+        </section>
+
+        <section>
+            <h2>Difference Between Progress and Meter</h2>
+
+            <ul>
+                <li>
+                    <strong>progress:</strong>
+                    Represents completion of a task.
+                </li>
+                <li>
+                    <strong>meter:</strong>
+                    Represents a measurement within a defined range.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab — Progress and Meter Practice</p>
+    </footer>
+
+</body>
+</html>
