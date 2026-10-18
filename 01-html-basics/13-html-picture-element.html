@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Picture Element</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Picture Element</h1>
+        <p>Learning how to display responsive images with HTML.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Responsive Picture Example</h2>
+
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500"
+                >
+
+                <source
+                    media="(min-width: 601px)"
+                    srcset="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1000"
+                    alt="Mountain landscape under the open sky"
+                    width="800"
+                    style="max-width: 100%; height: auto;"
+                >
+            </picture>
+        </section>
+
+        <section>
+            <h2>Important Elements</h2>
+
+            <ul>
+                <li>
+                    <strong>picture:</strong>
+                    Provides multiple image source options.
+                </li>
+
+                <li>
+                    <strong>source:</strong>
+                    Defines an image option and its conditions.
+                </li>
+
+                <li>
+                    <strong>media:</strong>
+                    Specifies the condition for selecting a source.
+                </li>
+
+                <li>
+                    <strong>srcset:</strong>
+                    Specifies the image resource to use.
+                </li>
+
+                <li>
+                    <strong>img:</strong>
+                    Provides the fallback image and alternative text.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Practice Task</h2>
+            <p>
+                Change the image URLs and experiment with different
+                media query breakpoints.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab — Picture Element Practice</p>
+    </footer>
+
+</body>
+</html>
