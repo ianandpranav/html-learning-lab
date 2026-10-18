@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Link Attributes</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Link Attributes</h1>
+        <p>Learning how to control link behavior using HTML attributes.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Open a Link in the Same Tab</h2>
+            <p>
+                <a href="https://www.wikipedia.org/">
+                    Visit Wikipedia
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Open a Link in a New Tab</h2>
+            <p>
+                <a href="https://developer.mozilla.org/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit MDN Web Docs
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Email Link</h2>
+            <p>
+                <a href="mailto:example@example.com">
+                    Send an Email
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Telephone Link</h2>
+            <p>
+                <a href="tel:+911234567890">
+                    Call Us
+                </a>
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Download Link</h2>
+            <p>
+                <a href="sample.txt" download>
+                    Download Sample Text File
+                </a>
+            </p>
+            <p>
+                Note: Add a file named sample.txt in this folder
+                for the download example to work.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Link to a Section on This Page</h2>
+            <p>
+                <a href="#contact">
+                    Go to Contact Section
+                </a>
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Section</h2>
+            <p>You have reached the contact section.</p>
+            <a href="#top">Back to Top</a>
+        </section>
+    </main>
+
+    <footer id="top">
+        <p>HTML Learning Lab - Practice File 18</p>
+    </footer>
+
+</body>
+</html>
