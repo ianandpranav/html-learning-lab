@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Template Element</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Template Element</h1>
+        <p>Learning how to store reusable HTML content.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Reusable Student Cards</h2>
+
+            <button type="button" id="addStudent">
+                Add Student
+            </button>
+
+            <div id="studentList"></div>
+
+            <template id="studentTemplate">
+                <article>
+                    <h3 class="studentName"></h3>
+                    <p class="studentCourse"></p>
+                </article>
+            </template>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 26</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("addStudent");
+        const studentList = document.getElementById("studentList");
+        const template = document.getElementById("studentTemplate");
+
+        let studentCount = 0;
+
+        button.addEventListener("click", function () {
+            studentCount++;
+
+            const studentCard = template.content.cloneNode(true);
+
+            studentCard.querySelector(".studentName").textContent =
+                "Student " + studentCount;
+
+            studentCard.querySelector(".studentCourse").textContent =
+                "Course: HTML Basics";
+
+            studentList.appendChild(studentCard);
+        });
+    </script>
+
+</body>
+</html>
