@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BDI and Ruby</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML BDI and Ruby Elements</h1>
+        <p>Learning bidirectional text isolation and pronunciation annotations.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. BDI Element</h2>
+
+            <p>
+                The bdi element isolates text whose direction may differ
+                from the surrounding text.
+            </p>
+
+            <ul>
+                <li>User: <bdi>anand123</bdi> — Score: 150</li>
+                <li>User: <bdi>علي</bdi> — Score: 200</li>
+                <li>User: <bdi>Rahul</bdi> — Score: 175</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Ruby Element</h2>
+
+            <p>
+                Ruby annotations can display pronunciation guides
+                alongside East Asian characters.
+            </p>
+
+            <p>
+                <ruby>
+                    漢 <rp>(</rp><rt>かん</rt><rp>)</rp>
+                    字 <rp>(</rp><rt>じ</rt><rp>)</rp>
+                </ruby>
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Ruby Annotation Parts</h2>
+
+            <ul>
+                <li><code>ruby</code> — groups the annotated text.</li>
+                <li><code>rt</code> — provides the pronunciation annotation.</li>
+                <li><code>rp</code> — provides fallback parentheses when ruby annotations aren't supported.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 29</p>
+    </footer>
+
+</body>
+</html>
