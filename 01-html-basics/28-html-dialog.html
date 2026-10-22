@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Dialog Element</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Dialog Element</h1>
+        <p>Learning how to create a dialog box using HTML.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Open a Dialog</h2>
+
+            <button type="button" id="openDialog">
+                Open Dialog
+            </button>
+
+            <dialog id="infoDialog">
+                <h2>Welcome!</h2>
+                <p>This is a dialog box created using HTML.</p>
+
+                <button type="button" id="closeDialog">
+                    Close Dialog
+                </button>
+            </dialog>
+        </section>
+
+        <section>
+            <h2>2. Confirmation Dialog</h2>
+
+            <button type="button" id="confirmButton">
+                Delete Item
+            </button>
+
+            <dialog id="confirmDialog">
+                <h2>Confirm Action</h2>
+                <p>Are you sure you want to delete this item?</p>
+
+                <button type="button" id="cancelDelete">
+                    Cancel
+                </button>
+
+                <button type="button" id="confirmDelete">
+                    Confirm
+                </button>
+            </dialog>
+
+            <p id="resultMessage">No action taken.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 28</p>
+    </footer>
+
+    <script>
+        const infoDialog = document.getElementById("infoDialog");
+
+        document.getElementById("openDialog").addEventListener("click", function () {
+            infoDialog.showModal();
+        });
+
+        document.getElementById("closeDialog").addEventListener("click", function () {
+            infoDialog.close();
+        });
+
+        const confirmDialog = document.getElementById("confirmDialog");
+        const resultMessage = document.getElementById("resultMessage");
+
+        document.getElementById("confirmButton").addEventListener("click", function () {
+            confirmDialog.showModal();
+        });
+
+        document.getElementById("cancelDelete").addEventListener("click", function () {
+            confirmDialog.close();
+            resultMessage.textContent = "Action cancelled.";
+        });
+
+        document.getElementById("confirmDelete").addEventListener("click", function () {
+            confirmDialog.close();
+            resultMessage.textContent = "Confirmation received. No real item was deleted.";
+        });
+    </script>
+
+</body>
+</html>
