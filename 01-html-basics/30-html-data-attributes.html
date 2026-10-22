@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Data Attributes</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Data Attributes</h1>
+        <p>Learning how to store and access custom data in HTML.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Product List</h2>
+
+            <article
+                class="product"
+                data-id="101"
+                data-name="Keyboard"
+                data-price="799"
+            >
+                <h3>Keyboard</h3>
+                <p>Price: ₹799</p>
+                <button type="button" class="viewButton">
+                    View Product
+                </button>
+            </article>
+
+            <hr>
+
+            <article
+                class="product"
+                data-id="102"
+                data-name="Mouse"
+                data-price="499"
+            >
+                <h3>Mouse</h3>
+                <p>Price: ₹499</p>
+                <button type="button" class="viewButton">
+                    View Product
+                </button>
+            </article>
+
+            <hr>
+
+            <h2>Selected Product</h2>
+            <p id="productDetails">Click View Product to see details.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 30</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll(".viewButton");
+        const productDetails = document.getElementById("productDetails");
+
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const product = button.closest(".product");
+
+                const id = product.dataset.id;
+                const name = product.dataset.name;
+                const price = product.dataset.price;
+
+                productDetails.textContent =
+                    "ID: " + id +
+                    " | Name: " + name +
+                    " | Price: ₹" + price;
+            });
+        });
+    </script>
+
+</body>
+</html>
