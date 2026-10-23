@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Draggable and Translate</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Draggable and Translate</h1>
+        <p>Learning about draggable elements and translation hints.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Draggable Element</h2>
+
+            <p>Drag the box below into the drop area.</p>
+
+            <div
+                id="dragItem"
+                draggable="true"
+                style="width: 180px; padding: 20px; background-color: lightblue;"
+            >
+                Drag Me
+            </div>
+
+            <br>
+
+            <div
+                id="dropArea"
+                style="width: 250px; height: 100px; padding: 10px; border: 2px dashed black;"
+            >
+                Drop Here
+            </div>
+
+            <p id="dragMessage">No item dropped yet.</p>
+        </section>
+
+        <section>
+            <h2>2. Translate Attribute</h2>
+
+            <p translate="yes">
+                Welcome to my HTML learning project.
+            </p>
+
+            <p translate="no">
+                HTML Learning Lab
+            </p>
+
+            <p>
+                The translate attribute provides a hint about whether
+                an element's text should be translated.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 34</p>
+    </footer>
+
+    <script>
+        const dragItem = document.getElementById("dragItem");
+        const dropArea = document.getElementById("dropArea");
+        const dragMessage = document.getElementById("dragMessage");
+
+        dragItem.addEventListener("dragstart", function (event) {
+            event.dataTransfer.setData("text/plain", "Drag Me");
+        });
+
+        dropArea.addEventListener("dragover", function (event) {
+            event.preventDefault();
+        });
+
+        dropArea.addEventListener("drop", function (event) {
+            event.preventDefault();
+
+            const draggedText = event.dataTransfer.getData("text/plain");
+
+            dropArea.textContent = draggedText + " dropped successfully!";
+            dragMessage.textContent = "You completed the drag-and-drop exercise.";
+        });
+    </script>
+
+</body>
+</html>
