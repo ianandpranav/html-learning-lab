@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Contenteditable and Spellcheck</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Contenteditable and Spellcheck</h1>
+        <p>Learning how to make webpage content editable.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Editable Paragraph</h2>
+
+            <p contenteditable="true">
+                Click here and change this text directly in the browser.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Editable Notes</h2>
+
+            <div contenteditable="true" spellcheck="true">
+                <h3>My Learning Notes</h3>
+                <p>I am learning HTML, CSS, and JavaScript.</p>
+                <p>Click here to edit these notes.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Spellcheck Enabled</h2>
+
+            <textarea
+                rows="4"
+                cols="40"
+                spellcheck="true"
+                placeholder="Type some text and check spelling"
+            ></textarea>
+        </section>
+
+        <section>
+            <h2>4. Spellcheck Disabled</h2>
+
+            <textarea
+                rows="4"
+                cols="40"
+                spellcheck="false"
+                placeholder="Spellcheck is disabled here"
+            ></textarea>
+        </section>
+
+        <section>
+            <h2>5. Important Notes</h2>
+
+            <ul>
+                <li><code>contenteditable="true"</code> allows editing in the browser.</li>
+                <li><code>spellcheck="true"</code> requests spelling checks where supported.</li>
+                <li><code>spellcheck="false"</code> disables spelling checks for that element.</li>
+                <li>Edits are not automatically saved to a database or file.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 33</p>
+    </footer>
+
+</body>
+</html>
