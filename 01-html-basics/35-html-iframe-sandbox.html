@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Iframe Sandbox</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Iframe Sandbox</h1>
+        <p>Learning how to embed content with security restrictions.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Basic Iframe</h2>
+
+            <iframe
+                src="https://example.com"
+                title="Example website"
+                width="400"
+                height="200"
+            ></iframe>
+        </section>
+
+        <section>
+            <h2>2. Sandboxed Iframe</h2>
+
+            <p>
+                The sandbox attribute applies restrictions to
+                the embedded document.
+            </p>
+
+            <iframe
+                srcdoc="<h2>Sandboxed Content</h2><p>This content is displayed inside an iframe.</p><a href='https://example.com'>Example Link</a>"
+                title="Sandboxed example"
+                sandbox
+                width="400"
+                height="200"
+            ></iframe>
+        </section>
+
+        <section>
+            <h2>3. Allow Forms in a Sandbox</h2>
+
+            <iframe
+                srcdoc="<h2>Sample Form</h2><form><label>Name: <input type='text'></label><button type='submit'>Submit</button></form>"
+                title="Sandboxed form example"
+                sandbox="allow-forms"
+                width="400"
+                height="200"
+            ></iframe>
+        </section>
+
+        <section>
+            <h2>4. Important Security Notes</h2>
+
+            <ul>
+                <li>An iframe embeds another document inside the current page.</li>
+                <li>The sandbox attribute applies restrictions to embedded content.</li>
+                <li>Only add permissions that the embedded content actually needs.</li>
+                <li>A sandboxed form may submit or reload within its frame, but this example has no backend.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 35</p>
+    </footer>
+
+</body>
+</html>
