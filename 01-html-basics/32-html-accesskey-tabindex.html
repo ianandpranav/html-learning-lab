@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Accesskey and Tabindex</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Accesskey and Tabindex</h1>
+        <p>Learning keyboard navigation and shortcuts in HTML.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Tabindex Attribute</h2>
+
+            <p tabindex="0">
+                This paragraph can receive keyboard focus.
+            </p>
+
+            <button type="button" tabindex="1">
+                First Focusable Button
+            </button>
+
+            <button type="button" tabindex="2">
+                Second Focusable Button
+            </button>
+
+            <p>
+                Press the Tab key to move through focusable elements.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Accesskey Attribute</h2>
+
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                accesskey="u"
+                placeholder="Enter username"
+            >
+
+            <br><br>
+
+            <button type="button" accesskey="s">
+                Save
+            </button>
+
+            <p>
+                Access keys can focus or activate elements using
+                browser and operating-system-specific key combinations.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Keyboard Navigation Tips</h2>
+
+            <ul>
+                <li>Use Tab to move forward through focusable elements.</li>
+                <li>Use Shift + Tab to move backward.</li>
+                <li>Use Enter or Space to activate many focused controls.</li>
+                <li>Prefer the natural tab order in most webpages.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 32</p>
+    </footer>
+
+</body>
+</html>
