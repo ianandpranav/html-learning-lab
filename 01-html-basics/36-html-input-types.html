@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Types</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Input Types</h1>
+        <p>Learning different input types available in HTML.</p>
+    </header>
+
+    <main>
+        <form>
+            <section>
+                <h2>1. Text and Contact Inputs</h2>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <br><br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <br><br>
+
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
+            </section>
+
+            <section>
+                <h2>2. Date and Time Inputs</h2>
+
+                <label for="birthday">Date:</label>
+                <input type="date" id="birthday" name="birthday">
+                <br><br>
+
+                <label for="meeting">Time:</label>
+                <input type="time" id="meeting" name="meeting">
+                <br><br>
+
+                <label for="month">Month:</label>
+                <input type="month" id="month" name="month">
+                <br><br>
+
+                <label for="week">Week:</label>
+                <input type="week" id="week" name="week">
+            </section>
+
+            <section>
+                <h2>3. Number and Range Inputs</h2>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" max="100">
+                <br><br>
+
+                <label for="rating">Rating (1–10):</label>
+                <input type="range" id="rating" name="rating" min="1" max="10">
+            </section>
+
+            <section>
+                <h2>4. Selection Inputs</h2>
+
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <br><br>
+
+                <input type="checkbox" id="html" name="skills" value="html">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="css" name="skills" value="css">
+                <label for="css">CSS</label>
+            </section>
+
+            <section>
+                <h2>5. Other Input Types</h2>
+
+                <label for="color">Choose a color:</label>
+                <input type="color" id="color" name="color">
+                <br><br>
+
+                <label for="file">Upload a file:</label>
+                <input type="file" id="file" name="file">
+                <br><br>
+
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search">
+                <br><br>
+
+                <label for="hiddenExample">Hidden input example:</label>
+                <input type="hidden" id="hiddenExample" name="source" value="html-practice">
+
+                <input type="submit" value="Submit Form">
+                <input type="reset" value="Reset Form">
+            </section>
+        </form>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 36</p>
+    </footer>
+
+</body>
+</html>
