@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Validation</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Form Validation</h1>
+        <p>Learning how to validate user input using HTML attributes.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Student Registration</h2>
+
+            <form action="#" method="get">
+
+                <p>
+                    <label for="username">Username:</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        minlength="3"
+                        maxlength="20"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        minlength="8"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="age">Age:</label>
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="18"
+                        max="60"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="phone">10-digit phone number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        pattern="[0-9]{10}"
+                        title="Enter exactly 10 digits."
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="website">Portfolio URL:</label>
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://example.com"
+                    >
+                </p>
+
+                <p>
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select a course</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                </p>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 37</p>
+    </footer>
+
+</body>
+</html>
