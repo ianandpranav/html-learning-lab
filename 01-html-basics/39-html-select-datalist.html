@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Select and Datalist</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Select and Datalist</h1>
+        <p>Learning dropdown menus and suggested input options.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Basic Select Dropdown</h2>
+
+            <label for="course">Choose a course:</label>
+
+            <select id="course" name="course">
+                <option value="">Select a course</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React.js</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>2. Grouped Options</h2>
+
+            <label for="technology">Choose a technology:</label>
+
+            <select id="technology" name="technology">
+                <option value="">Select a technology</option>
+
+                <optgroup label="Frontend">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </optgroup>
+
+                <optgroup label="Backend">
+                    <option value="java">Java</option>
+                    <option value="nodejs">Node.js</option>
+                    <option value="python">Python</option>
+                </optgroup>
+            </select>
+        </section>
+
+        <section>
+            <h2>3. Multiple Selection</h2>
+
+            <label for="skills">Choose your skills:</label>
+
+            <select id="skills" name="skills" multiple size="4">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React.js</option>
+            </select>
+
+            <p>Use Ctrl on Windows to select multiple options.</p>
+        </section>
+
+        <section>
+            <h2>4. Datalist Suggestions</h2>
+
+            <label for="language">Enter a programming language:</label>
+
+            <input
+                type="text"
+                id="language"
+                name="language"
+                list="languages"
+                placeholder="Start typing..."
+            >
+
+            <datalist id="languages">
+                <option value="Java">
+                <option value="JavaScript">
+                <option value="Python">
+                <option value="C++">
+                <option value="C#">
+            </datalist>
+        </section>
+
+        <section>
+            <h2>5. Submit Form</h2>
+
+            <form action="#" method="get">
+                <label for="preferredCourse">Preferred Course:</label>
+
+                <select id="preferredCourse" name="preferredCourse" required>
+                    <option value="">Select one</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 39</p>
+    </footer>
+
+</body>
+</html>
