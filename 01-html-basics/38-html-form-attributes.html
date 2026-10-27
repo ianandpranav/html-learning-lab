@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Attributes</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Form Attributes</h1>
+        <p>Learning how form attributes control form behavior.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. GET Method</h2>
+
+            <form action="#" method="get" autocomplete="on">
+                <label for="search">Search Topic:</label>
+                <input
+                    type="search"
+                    id="search"
+                    name="topic"
+                    placeholder="Enter a topic"
+                >
+
+                <button type="submit">Search</button>
+            </form>
+
+            <p>
+                GET sends form data in the URL.
+                Do not use it for passwords or sensitive information.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. POST Method</h2>
+
+            <form action="#" method="post" autocomplete="on">
+                <label for="fullName">Full Name:</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                >
+
+                <br><br>
+
+                <label for="userEmail">Email:</label>
+                <input
+                    type="email"
+                    id="userEmail"
+                    name="email"
+                    required
+                >
+
+                <br><br>
+
+                <button type="submit">Submit Details</button>
+            </form>
+
+            <p>
+                POST sends data in the request body, but a real server
+                is required to process and save it.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Autocomplete Attribute</h2>
+
+            <form action="#" method="get" autocomplete="on">
+                <label for="givenName">First Name:</label>
+                <input
+                    type="text"
+                    id="givenName"
+                    name="givenName"
+                    autocomplete="given-name"
+                >
+
+                <br><br>
+
+                <label for="contactEmail">Email:</label>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    autocomplete="email"
+                >
+
+                <br><br>
+
+                <button type="submit">Continue</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>4. Novalidate Attribute</h2>
+
+            <form action="#" method="get" novalidate>
+                <label for="demoEmail">Enter an email:</label>
+                <input
+                    type="email"
+                    id="demoEmail"
+                    name="demoEmail"
+                    required
+                >
+
+                <button type="submit">Submit Without Browser Validation</button>
+            </form>
+
+            <p>
+                The novalidate attribute disables the browser's
+                built-in form validation when submitting this form.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 38</p>
+    </footer>
+
+</body>
+</html>
