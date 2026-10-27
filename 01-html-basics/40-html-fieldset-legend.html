@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fieldset and Legend</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Fieldset and Legend</h1>
+        <p>Learning how to group related form controls.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Student Registration Form</h2>
+
+            <form action="#" method="get">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullName">Full Name:</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        >
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Course Information</legend>
+
+                    <p>
+                        <label for="course">Select Course:</label>
+
+                        <select id="course" name="course" required>
+                            <option value="">Choose a course</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                        </select>
+                    </p>
+
+                    <p>Preferred learning mode:</p>
+
+                    <input
+                        type="radio"
+                        id="online"
+                        name="mode"
+                        value="online"
+                        required
+                    >
+                    <label for="online">Online</label>
+
+                    <input
+                        type="radio"
+                        id="offline"
+                        name="mode"
+                        value="offline"
+                    >
+                    <label for="offline">Offline</label>
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Important Notes</h2>
+            <ul>
+                <li><code>fieldset</code> groups related form controls.</li>
+                <li><code>legend</code> provides a caption for that group.</li>
+                <li>Labels should be connected to their inputs using matching IDs.</li>
+                <li>These elements help make forms easier to understand and navigate.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 40</p>
+    </footer>
+
+</body>
+</html>
