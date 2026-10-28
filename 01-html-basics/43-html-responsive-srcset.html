@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Responsive Images</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Responsive Images</h1>
+        <p>Learning how to provide different image sizes to the browser.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Using srcset and sizes</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                srcset="
+                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400 400w,
+                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800 800w,
+                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200 1200w
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1000px) 80vw, 800px"
+                alt="Laptop and workspace for web development"
+                width="800"
+                style="max-width: 100%; height: auto;"
+            >
+        </section>
+
+        <section>
+            <h2>2. Responsive Image with Picture</h2>
+
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400"
+                >
+
+                <source
+                    media="(max-width: 1000px)"
+                    srcset="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200"
+                    alt="Person working on a laptop"
+                    width="800"
+                    style="max-width: 100%; height: auto;"
+                >
+            </picture>
+        </section>
+
+        <section>
+            <h2>Important Concepts</h2>
+
+            <ul>
+                <li><code>src</code> provides the default image.</li>
+                <li><code>srcset</code> provides multiple image candidates.</li>
+                <li><code>sizes</code> describes the expected rendered image width.</li>
+                <li><code>w</code> descriptors specify candidate image widths.</li>
+                <li><code>picture</code> and <code>source</code> can select images based on media conditions.</li>
+                <li><code>max-width: 100%</code> helps prevent images from overflowing their container.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 43</p>
+    </footer>
+
+</body>
+</html>
