@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Meter and Progress Practice</title>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Meter and Progress</h1>
+        <p>Learning how to display progress and measured values.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Course Completion Progress</h2>
+
+            <p>Course completion: <span id="progressText">30%</span></p>
+
+            <progress id="courseProgress" value="30" max="100">30%</progress>
+
+            <br><br>
+
+            <button type="button" id="increaseProgress">
+                Complete Next Step
+            </button>
+
+            <button type="button" id="resetProgress">
+                Reset Progress
+            </button>
+        </section>
+
+        <section>
+            <h2>2. Storage Usage Meter</h2>
+
+            <p>
+                Storage used:
+                <meter id="storageMeter" min="0" max="100"
+                       low="40" high="80" optimum="20"
+                       value="25">25%</meter>
+                <span id="storageText">25%</span>
+            </p>
+
+            <button type="button" id="increaseStorage">
+                Increase Storage Usage
+            </button>
+        </section>
+
+        <section>
+            <h2>3. Understanding the Difference</h2>
+
+            <ul>
+                <li><code>progress</code> represents the completion of a task.</li>
+                <li><code>meter</code> represents a value within a known range.</li>
+                <li><code>value</code> specifies the current value.</li>
+                <li><code>max</code> specifies the maximum value for progress.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 42</p>
+    </footer>
+
+    <script>
+        const courseProgress = document.getElementById("courseProgress");
+        const progressText = document.getElementById("progressText");
+
+        document.getElementById("increaseProgress").addEventListener("click", function () {
+            const nextValue = Math.min(Number(courseProgress.value) + 10, 100);
+
+            courseProgress.value = nextValue;
+            progressText.textContent = nextValue + "%";
+        });
+
+        document.getElementById("resetProgress").addEventListener("click", function () {
+            courseProgress.value = 30;
+            progressText.textContent = "30%";
+        });
+
+        const storageMeter = document.getElementById("storageMeter");
+        const storageText = document.getElementById("storageText");
+
+        document.getElementById("increaseStorage").addEventListener("click", function () {
+            const nextValue = Math.min(Number(storageMeter.value) + 10, 100);
+
+            storageMeter.value = nextValue;
+            storageText.textContent = nextValue + "%";
+        });
+    </script>
+
+</body>
+</html>
