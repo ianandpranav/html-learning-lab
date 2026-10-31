@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Base Element</title>
+
+    <!-- Defines the base URL for relative links -->
+    <base href="https://example.com/" target="_blank">
+</head>
+<body>
+
+    <header>
+        <h1>HTML Base Element</h1>
+        <p>Learning how to define a base URL for relative links.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Relative Link</h2>
+
+            <p>
+                <a href="about.html">
+                    Open About Page
+                </a>
+            </p>
+
+            <p>
+                The link resolves to:
+                https://example.com/about.html
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Relative Image</h2>
+
+            <img
+                src="images/sample.jpg"
+                alt="Sample image"
+                width="300"
+            >
+
+            <p>
+                The image URL resolves relative to the base URL.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Base Target</h2>
+
+            <p>
+                Relative links without their own target attribute
+                use the target defined in the base element.
+            </p>
+        </section>
+
+        <section>
+            <h2>Important Notes</h2>
+
+            <ul>
+                <li>The base element is placed inside the head element.</li>
+                <li>A document should have at most one base element.</li>
+                <li>The href attribute defines the base URL.</li>
+                <li>The target attribute defines the default link target.</li>
+                <li>Be careful: base can affect all relative URLs in the document.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>HTML Learning Lab - Practice File 46</p>
+    </footer>
+
+</body>
+</html>
