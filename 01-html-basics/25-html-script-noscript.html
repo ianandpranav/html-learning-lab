@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Script and Noscript</title>
+</head>
+<body>
+
+    <h1>HTML Script and Noscript Elements</h1>
+
+    <h2>1. Script Element</h2>
+
+    <p id="message">JavaScript has not run yet.</p>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "JavaScript is working!";
+        }
+    </script>
+
+    <h2>2. Noscript Element</h2>
+
+    <noscript>
+        <p>
+            JavaScript is disabled in your browser.
+            Please enable JavaScript to use all features.
+        </p>
+    </noscript>
+
+</body>
+</html>
